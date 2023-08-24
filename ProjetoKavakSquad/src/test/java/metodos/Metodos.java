@@ -25,12 +25,14 @@ public class Metodos extends DriversFactory {
 		TakesScreenshot srcShot = (TakesScreenshot) driver;
 		File srcFile = srcShot.getScreenshotAs(OutputType.FILE);
 		File srcDest = new File("./evidencias/" + evidencia + ".png");
+		
 		try {
 			FileUtils.copyFile(srcFile, srcDest);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
+	
 
 	public void pausa(int tempo) {
 		try {
